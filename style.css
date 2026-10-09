@@ -1,0 +1,194 @@
+```css
+/* Estilos generales del proyecto */
+:root {
+    --primary-color: #153b73;
+    --secondary-color: #18a999;
+    --dark-color: #10243a;
+    --light-color: #f3f7fc;
+    --text-color: #263447;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #ffffff;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+/* Encabezado principal */
+.hero {
+    background: linear-gradient(135deg, #10243a, #176b87);
+    padding: 80px 20px !important;
+}
+
+.hero h1 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    margin-bottom: 1rem;
+}
+
+.hero .lead {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.eyebrow {
+    color: #8ef0dc;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+/* Navegación */
+.navbar-brand {
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: #8ef0dc !important;
+}
+
+/* Tarjetas de conceptos */
+.concept-card,
+.demo-card,
+.about-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e8f1;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(16, 36, 58, 0.07);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.concept-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(16, 36, 58, 0.12);
+}
+
+.concept-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 12px;
+}
+
+/* Laboratorio interactivo */
+.lab-section {
+    background-color: var(--light-color);
+}
+
+.demo-card {
+    border-top: 4px solid var(--secondary-color);
+}
+
+.demo-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.demo-card .btn {
+    margin-bottom: 12px;
+}
+
+.result-box {
+    display: block;
+    width: 100%;
+    min-height: 85px;
+    margin-top: 12px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #edf3fa;
+    color: #18324d;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.9rem;
+}
+
+.form-control:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.2rem rgba(24, 169, 153, 0.2);
+}
+
+.counter {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--secondary-color);
+    margin: 10px 0;
+}
+
+/* Información del proyecto */
+.about-card {
+    border-left: 5px solid var(--secondary-color);
+}
+
+footer {
+    background-color: var(--dark-color);
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 576px) {
+    .hero {
+        padding: 55px 15px !important;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .concept-card,
+    .demo-card,
+    .about-card {
+        padding: 20px;
+    }
+
+    .demo-card .btn {
+        width: 100%;
+    }
+
+    .result-box {
+        font-size: 0.82rem;
+    }
+}
+
+/* Respeta la preferencia del usuario por menos animaciones */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+```

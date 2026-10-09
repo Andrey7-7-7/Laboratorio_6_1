@@ -1,0 +1,171 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyecto educativo sobre JavaScript, programación y diseño web responsivo.">
+    <title>Laboratorio 6.1 | JavaScript</title>
+
+    <!-- Bootstrap 5 para el diseño responsivo -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Hoja de estilos personalizada -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icono del proyecto -->
+    <link rel="icon" href="images/javascript.svg" type="image/svg+xml">
+</head>
+<body>
+    <!-- Encabezado principal -->
+    <header class="hero text-center text-white py-5">
+        <div class="container">
+            <p class="eyebrow">LABORATORIO 6.1</p>
+            <h1>Aprendiendo JavaScript</h1>
+            <p class="lead">Variables, funciones, arreglos, objetos y lógica de programación.</p>
+            <a href="#laboratorio" class="btn btn-warning btn-lg mt-3">Explorar el laboratorio</a>
+        </div>
+    </header>
+
+    <!-- Navegación principal -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">JS Lab</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal" aria-controls="menuPrincipal"
+                aria-expanded="false" aria-label="Abrir menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#conceptos">Conceptos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#laboratorio">Pruebas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#acerca">Acerca del proyecto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal de HTML5 -->
+    <main>
+        <section id="conceptos" class="container py-5">
+            <div class="text-center mb-4">
+                <h2>Conceptos fundamentales</h2>
+                <p class="text-secondary">Elementos básicos utilizados en JavaScript.</p>
+            </div>
+
+            <div class="row g-4">
+                <article class="col-md-6 col-lg-4">
+                    <div class="concept-card h-100">
+                        <h3>Variables y datos</h3>
+                        <p>Las variables almacenan información como texto, números y valores lógicos.</p>
+                    </div>
+                </article>
+
+                <article class="col-md-6 col-lg-4">
+                    <div class="concept-card h-100">
+                        <h3>Arreglos y objetos</h3>
+                        <p>Los arreglos reúnen varios valores y los objetos organizan información mediante propiedades.</p>
+                    </div>
+                </article>
+
+                <article class="col-md-6 col-lg-4">
+                    <div class="concept-card h-100">
+                        <h3>Funciones y decisiones</h3>
+                        <p>Las funciones reutilizan código y los condicionales permiten tomar decisiones.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Área interactiva conectada con script.js -->
+        <section id="laboratorio" class="lab-section py-5">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2>Laboratorio interactivo</h2>
+                    <p>Ejecuta las pruebas y observa los resultados.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="demo-card h-100">
+                            <h3>1. Variables y tipos de datos</h3>
+                            <p>Consulta ejemplos de texto, números y valores booleanos.</p>
+                            <button class="btn btn-primary" id="btnVariables">Mostrar variables</button>
+                            <pre id="resultadoVariables" class="result-box" aria-live="polite">Aquí aparecerán los resultados.</pre>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="demo-card h-100">
+                            <h3>2. Arreglos y objetos</h3>
+                            <p>Explora una lista de tecnologías y un objeto de ejemplo.</p>
+                            <button class="btn btn-primary" id="btnDatos">Mostrar datos</button>
+                            <pre id="resultadoDatos" class="result-box" aria-live="polite">Aquí aparecerán los resultados.</pre>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="demo-card h-100">
+                            <h3>3. Condicionales</h3>
+                            <label for="nota" class="form-label">Escribe una nota de 0 a 100:</label>
+                            <input type="number" id="nota" class="form-control mb-3"
+                                min="0" max="100" value="85">
+                            <button class="btn btn-primary" id="btnNota">Evaluar nota</button>
+                            <p id="resultadoNota" class="result-box" aria-live="polite">El resultado aparecerá aquí.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="demo-card h-100">
+                            <h3>4. Bucles</h3>
+                            <p>Ejecuta ejemplos con for, while y do...while.</p>
+                            <button class="btn btn-primary" id="btnBucles">Ejecutar bucles</button>
+                            <pre id="resultadoBucles" class="result-box" aria-live="polite">Aquí aparecerán los resultados.</pre>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="demo-card h-100">
+                            <h3>5. Funciones y alcance</h3>
+                            <p>Una función procesa valores y otra demuestra el alcance de las variables.</p>
+                            <button class="btn btn-primary" id="btnFunciones">Probar funciones</button>
+                            <pre id="resultadoFunciones" class="result-box" aria-live="polite">Aquí aparecerán los resultados.</pre>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="demo-card h-100">
+                            <h3>6. Clausuras (closures)</h3>
+                            <p>Presiona el botón para incrementar un contador que conserva su valor.</p>
+                            <p class="counter" id="contador">0</p>
+                            <button class="btn btn-success" id="btnContador">Incrementar contador</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Información del autor y objetivo -->
+        <section id="acerca" class="container py-5">
+            <div class="about-card">
+                <h2>Acerca del proyecto</h2>
+                <p>Este sitio demuestra conceptos esenciales de JavaScript con una interfaz responsiva creada con Bootstrap y CSS.</p>
+                <p><strong>Estudiante:</strong> Andrey Arciniegas</p>
+                <p><strong>Proyecto:</strong> Laboratorio 6.1</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="text-center text-white py-4">
+        <p class="mb-0">Laboratorio 6.1 · HTML5, CSS, Bootstrap y JavaScript</p>
+    </footer>
+
+    <!-- Bootstrap y archivo externo de JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+```
